@@ -1,0 +1,222 @@
+/*    
+Jeff 11/28/2022
+index.css
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    background-color: rgba(237, 247, 255, 0.747);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameCard {
+    display: none;
+}
+
+.gameCard.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    min-width: 200px;
+    aspect-ratio: .70;
+    margin: .4rem auto;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.name {
+    margin: auto 0;
+    font-size: clamp(1.2rem, 0.5645rem + 1.6145vw, 2.3rem);
+    color: rgb(0, 102, 255);
+    text-align: center;
+}
+
+.type {
+    margin: 0 0 1rem 0;
+    font-size: clamp(1rem, 0.8443rem + 0.5738vw, 1.5rem);
+}
+
+.gameCard img {
+    padding: .5rem;
+    height: 70%;
+    min-width: 170px !important;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    color: rgb(13, 139, 127);
+}
+
+form {
+    position: relative;
+    margin: .5rem 0 .5rem;
+    width: 15vw;
+    min-width: 270px;
+}
+
+.userNumber {
+    font-size: 1.2rem;
+    height: 30px;
+    border-radius: 7px;
+    padding: 0 5.2rem 0 .3rem;
+    width: 270px;
+}
+
+.submitButton {
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 5rem;
+    height: 30px;
+    font-size: 1.2rem;
+    color: lime;
+    background-color: black;
+    border: 3px solid rgb(13, 139, 127);
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    margin: 0 0 0 .3rem;
+}
+
+.keepButton-container {
+    display: none;
+}
+
+.keepButton-container.active {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.keepButton {
+    text-align: center;
+    width: 15vw;
+    min-width: 200px;
+    height: 30px;
+    font-size: 1.2rem;
+    color: lime;
+    background-color: black;
+    border: 3px solid rgb(13, 139, 127);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.keepStuff-container {
+    display: none;
+}
+
+.keepStuff-container.active {
+    display: flex;
+    height: 36vh;
+    width: 95%;
+    /* flex: 1; */
+    border-radius: 6px;
+    background-color: transparent;
+    overflow-x: scroll;
+    padding: 0 .3rem;
+    margin: .5rem auto 7rem;
+}
+
+.keepStuff-container.active div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 11vw;
+    min-width: 200px;
+    aspect-ratio: .70;
+    margin: .3rem;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.keepStuff-container.active div h4 {
+    margin: auto 0;
+    font-size: 1.8rem;
+    color: rgb(0, 102, 255);
+    text-align: center;
+    font-weight: 400;
+}
+
+.keepStuff-container.active div h5 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.keepStuff-container.active div h5::before {
+    content: 'type: '
+}
+
+.keepStuff-container img {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    aspect-ratio: 1;
+    min-width: 150px !important;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+/* .footer-container{
+    position: absolute !important;
+    top: 100vh;
+} */
+@media only screen and (min-width: 992px) {
+
+    .keepStuff-container.active {
+        display: flex;
+        height: 36vh;
+        width: 66.7%;
+        /* flex: 1; */
+        border-radius: 6px;
+        overflow-x: scroll;
+        padding: 0 .3rem;
+        margin: .5rem auto 7rem;
+    }
+    
+    .keepStuff-container.active div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 11vw;
+        min-width: 200px;
+        aspect-ratio: .70;
+        margin: .3rem;
+        border-radius: 6px;
+        background-color: white;
+        border: 1px solid black;
+    }
+}
